@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
+import profilePic from '../assets/PF-pic-2.png';
 
 const Home = () => {
     const techStack = [
@@ -71,7 +72,7 @@ const Home = () => {
                                 <div className="position-absolute w-100 h-100 bg-gradient-neon rounded-circle blur-3xl opacity-60"
                                     style={{ background: 'radial-gradient(circle, var(--neon-blue), var(--neon-purple))', filter: 'blur(100px)', transform: 'scale(1.2)' }}></div>
                                 <div className="glass-card d-flex align-items-center justify-content-center position-relative overflow-hidden hero-image-container">
-                                    <img src="src/assets/PF-pic-2.png" alt="profile-pic" className="w-100 h-100 object-fit-cover" />
+                                    <img src={profilePic} alt="profile-pic" className="w-100 h-100 object-fit-cover" />
                                 </div>
                             </motion.div>
                         </Col>
