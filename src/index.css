@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset & Base */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Color Variables */
+:root {
+  --neon-blue: #00f3ff;
+  --neon-purple: #bc13fe;
+  --neon-green: #0afff0;
+  --dark-bg: #0d0d0d;
+  --card-bg: #161b22;
+  --border-color: #21262d;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* Mobile Typography Scaling */
+@media (max-width: 991.98px) {
+  .display-3 {
+    font-size: 2.5rem !important;
+  }
+  .display-4 {
+    font-size: 2rem !important;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Utilities */
+.text-neon-blue { color: var(--neon-blue) !important; }
+.text-neon-purple { color: var(--neon-purple) !important; }
+.text-neon-green { color: var(--neon-green) !important; }
+
+.bg-dark-900 { background-color: var(--dark-bg); }
+.bg-dark-800 { background-color: var(--card-bg); }
+
+/* Glass Card */
+.glass-card {
+  background-color: rgba(22, 27, 34, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 243, 255, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(0, 243, 255, 0.1);
+}
+
+/* Neon Glow Effect */
+.glow-text {
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #21262d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f3ff;
+}
+
+/* Bootstrap Overrides */
+.btn-primary {
+  background-color: transparent;
+  border-color: var(--neon-blue);
+  color: var(--neon-blue);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: rgba(0, 243, 255, 0.1) !important;
+  border-color: var(--neon-blue) !important;
+  color: var(--neon-blue) !important;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.btn-glow {
+  background-color: var(--neon-blue);
+  border-color: var(--neon-blue);
+  color: #0d0d0d;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.btn-glow:hover {
+  background-color: #00d2dd;
+  border-color: #00d2dd;
+  color: #0d0d0d;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.7);
+}
+
+.form-control {
+    background-color: var(--dark-bg);
+    border: 1px solid var(--border-color);
+    color: #fff;
+}
+
+.form-control:focus {
+    background-color: var(--dark-bg);
+    border-color: var(--neon-blue);
+    color: #fff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 243, 255, 0.25);
+}
+
+@media (max-width: 991.98px) {
+  .hero-image-container {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* LG Screens (992px - 1199px) - Fix collision */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hero-image-container {
+    width: 380px;
+    height: 380px;
+  }
+  .display-lg-1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
+}
+
+/* XL Screens (1200px+) - Full size */
+/* XL Screens (1200px+) - Full size */
+@media (min-width: 1200px) {
+  .hero-image-container {
+    width: 500px;
+    height: 500px;
+  }
+  .display-lg-1 {
+    font-size: 5rem;
+    font-weight: 800;
+  }
+  .hero-desktop-spacing {
+    padding-bottom: 8rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* Main Content Padding Fix */
+.pt-1 { padding-top: 0.25rem !important; }
+/* Resume Page Responsiveness */
+.resume-container {
+  height: auto;
+  overflow-y: visible;
+  padding-bottom: 3rem;
+}
+
+.resume-preview-container {
+    height: auto;
+    width: 100%;
+    max-width: 600px; /* Limit width on mobile */
+    margin: 0 auto;
+}
+
+.resume-preview-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (min-width: 992px) {
+  .resume-container {
+    height: calc(100vh - 160px);
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+
+  .resume-preview-container {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
+
+  .resume-preview-image {
+    height: 100%;
+    width: auto;
+  }
+}
