@@ -4,6 +4,7 @@ import { Mail, Phone, Linkedin, Github, Send } from 'lucide-react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import SEO from '../components/SEO';
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -20,6 +21,7 @@ const Contact = () => {
 
     return (
         <Container className="pt-5 pb-3 pb-lg-5" style={{ maxWidth: '1000px' }}>
+            <SEO title="Contact" description="Get in touch with Abdul Basith for collaboration or job opportunities." url="/contact" />
             <motion.h1
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}

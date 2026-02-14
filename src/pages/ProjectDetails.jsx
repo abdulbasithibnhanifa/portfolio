@@ -5,6 +5,7 @@ import { Container, Row, Col, Badge } from 'react-bootstrap';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import { projects } from '../data/projects';
+import SEO from '../components/SEO';
 
 const ProjectDetails = () => {
     const { id } = useParams();
@@ -16,6 +17,7 @@ const ProjectDetails = () => {
 
     return (
         <Container className="pt-5 pb-3 pb-lg-5">
+            <SEO title={project.title} description={project.description} url={`/projects/${project.id}`} />
             <Link to="/projects" className="d-inline-flex align-items-center text-secondary text-decoration-none hover-neon mb-4">
                 <ArrowLeft size={20} className="me-2" /> Back to Projects
             </Link>

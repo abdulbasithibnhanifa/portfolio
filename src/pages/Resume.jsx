@@ -3,10 +3,12 @@ import { Download, Briefcase, GraduationCap, Code, ArrowUpRight } from 'lucide-r
 import { Container, Row, Col, Badge } from 'react-bootstrap';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import SEO from '../components/SEO';
 
 const Resume = () => {
     return (
         <Container fluid className="d-flex flex-column px-4 px-md-5 resume-container">
+            <SEO title="Resume" description="View and download Abdul Basith's resume detailing experience in Full-Stack Development." url="/resume" />
             <div className="row flex-grow-1 align-items-center h-100">
                 {/* Left Side: Header & Button */}
                 <div className="col-lg-4 d-flex flex-column justify-content-center align-items-start order-1 order-lg-1 mb-5 mb-lg-0 pt-5 pt-lg-0">

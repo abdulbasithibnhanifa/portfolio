@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col, Badge } from 'react-bootstrap';
 import Card from '../components/Card';
 import { projects } from '../data/projects';
+import SEO from '../components/SEO';
 
 const Projects = () => {
     return (
         <Container className="pt-5 pb-3 pb-lg-5">
+            <SEO title="Projects" description="Explore my full-stack projects featuring React, Node.js, and secure backend architecture." url="/projects" />
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

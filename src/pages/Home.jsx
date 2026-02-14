@@ -5,6 +5,7 @@ import Button from '../components/Button';
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
 import profilePic from '../assets/PF-pic-2.png';
+import SEO from '../components/SEO';
 
 const Home = () => {
     const techStack = [
@@ -16,6 +17,7 @@ const Home = () => {
 
     return (
         <div className="pb-5">
+            <SEO title="Home" />
             {/* Hero Section */}
             <section className="min-vh-100 min-vh-lg-80 d-flex align-items-center py-3 py-lg-0 hero-desktop-spacing">
                 <Container>
