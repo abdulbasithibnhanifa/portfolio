@@ -3,7 +3,7 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
     return (
-        <div className="d-flex flex-column min-vh-100 bg-dark-900 text-light font-sans selection-neon">
+        <div className="d-flex flex-column min-vh-100-dvh bg-dark-900 text-light font-sans selection-neon overflow-x-hidden">
             <Navbar />
             <main className="flex-grow-1 pt-1 px-3 px-md-5 container-fluid mx-auto" style={{ maxWidth: '1320px', marginTop: '4rem' }}>
                 {children}

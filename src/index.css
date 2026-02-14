@@ -42,9 +42,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Utilities */
+.min-vh-100-dvh {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 .text-neon-blue { color: var(--neon-blue) !important; }
 .text-neon-purple { color: var(--neon-purple) !important; }
 .text-neon-green { color: var(--neon-green) !important; }
+
+.min-vh-lg-80 {
+  min-height: 80vh !important;
+}
+
+/* Fix for mobile desktop mode (Iteration 4 - Final Robust) */
+/* Target devices:
+   - Width >= 900px (covers 980px standard Android desktop mode width)
+   - Portrait orientation (indicates mobile device)
+   OR
+   - Width >= 900px and coarse pointer (touch device)
+*/
+@media (min-width: 900px) and (orientation: portrait), 
+       (min-width: 900px) and (pointer: coarse) {
+       
+  section.min-vh-lg-80 { /* Increased specificity */
+    min-height: auto !important;
+    height: auto !important;
+    display: block !important;
+    padding-top: 8rem !important;
+    padding-bottom: 4rem !important;
+  }
+  
+  .hero-desktop-spacing {
+    margin-bottom: 2rem !important;
+    padding-bottom: 0 !important;
+  }
+}
 
 .bg-dark-900 { background-color: var(--dark-bg); }
 .bg-dark-800 { background-color: var(--card-bg); }
