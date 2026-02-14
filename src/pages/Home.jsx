@@ -25,6 +25,7 @@ const Home = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5 }}
+                                className="will-change-transform"
                             >
                                 <h2 className="text-neon-blue h5 mb-3 letter-spacing-wide fw-bold">ABDUL BASITH</h2>
                                 <h1 className="display-3 display-lg-1 fw-bold mb-4 lh-1">
@@ -37,7 +38,7 @@ const Home = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.1 }}
-                                className="text-gray-400 lead fs-4 border-start border-4 border-info ps-4 mb-5"
+                                className="text-gray-400 lead fs-4 border-start border-4 border-info ps-4 mb-5 will-change-transform"
                                 style={{ borderColor: 'var(--neon-blue) !important', maxWidth: '600px' }}
                             >
                                 Designing Secure and Scalable Full-Stack Applications with <span className="text-white fw-medium">Structured Backend Architecture</span>.
@@ -47,7 +48,7 @@ const Home = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
-                                className="d-flex gap-3 flex-wrap"
+                                className="d-flex gap-3 flex-wrap will-change-transform"
                             >
                                 <Link to="/projects">
                                     <Button variant="glow" className="d-flex align-items-center gap-2 px-4 py-3 fs-5">
@@ -67,12 +68,20 @@ const Home = () => {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.8 }}
-                                className="position-relative me-lg-5"
+                                className="position-relative me-lg-5 will-change-transform"
                             >
                                 <div className="position-absolute w-100 h-100 bg-gradient-neon rounded-circle blur-3xl opacity-60"
                                     style={{ background: 'radial-gradient(circle, var(--neon-blue), var(--neon-purple))', filter: 'blur(100px)', transform: 'scale(1.2)' }}></div>
                                 <div className="glass-card d-flex align-items-center justify-content-center position-relative overflow-hidden hero-image-container">
-                                    <img src={profilePic} alt="profile-pic" className="w-100 h-100 object-fit-cover" />
+                                    <img
+                                        src={profilePic}
+                                        alt="profile-pic"
+                                        className="w-100 h-100 object-fit-cover"
+                                        width="500"
+                                        height="500"
+                                        fetchPriority="high"
+                                        loading="eager"
+                                    />
                                 </div>
                             </motion.div>
                         </Col>
