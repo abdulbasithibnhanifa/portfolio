@@ -23,7 +23,7 @@ export const projects = [
             "https://placehold.co/600x400/161b22/00f3ff?text=Task+Management"
         ],
         githubLink: "https://github.com/abdulbasithibnhanifa/DevDesk",
-        demoLink: "#"
+        demoLink: "https://dev-desk-two.vercel.app/" // TODO: Update this after deploying to Vercel
     },
     {
         id: "instagram-clone",

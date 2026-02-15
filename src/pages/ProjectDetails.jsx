@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Github, Shield, Server, AlertTriangle, Layers, Image as ImageIcon } from 'lucide-react';
+import { ArrowLeft, Github, Shield, Server, AlertTriangle, Layers, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import { Container, Row, Col, Badge } from 'react-bootstrap';
 import Button from '../components/Button';
 import Card from '../components/Card';
@@ -38,6 +38,13 @@ const ProjectDetails = () => {
                                 <Github size={18} /> Source Code
                             </Button>
                         </a>
+                        {project.demoLink && project.demoLink !== '#' && (
+                            <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                                <Button variant="secondary" className="d-flex align-items-center gap-2">
+                                    <ExternalLink size={18} /> Live Demo
+                                </Button>
+                            </a>
+                        )}
                     </div>
                 </div>
 
