@@ -1,3 +1,9 @@
+import devDeskDashboard from '../assets/DevDesk-Preview-pics/dashboard-page.png';
+import devDeskLogin from '../assets/DevDesk-Preview-pics/login-page.png';
+import devDeskProfile from '../assets/DevDesk-Preview-pics/profile-page.png';
+import devDeskRegister from '../assets/DevDesk-Preview-pics/register-page.png';
+import devDeskTask from '../assets/DevDesk-Preview-pics/task-page.png';
+
 export const projects = [
     {
         id: "devdesk",
@@ -18,12 +24,14 @@ export const projects = [
         challenges: "Ensuring session persistence and cleaning up unverified users.",
         fix: "Implemented auto-login via /auth/me after OTP verification and used MongoDB TTL indexes for automatic cleanup of unverified accounts.",
         screenshots: [
-            "https://placehold.co/600x400/161b22/00f3ff?text=DevDesk+Dashboard",
-            "https://placehold.co/600x400/161b22/00f3ff?text=Project+View",
-            "https://placehold.co/600x400/161b22/00f3ff?text=Task+Management"
+            devDeskDashboard,
+            devDeskLogin,
+            devDeskProfile,
+            devDeskRegister,
+            devDeskTask
         ],
         githubLink: "https://github.com/abdulbasithibnhanifa/DevDesk",
-        demoLink: "https://dev-desk-two.vercel.app/" // TODO: Update this after deploying to Vercel
+        demoLink: "https://dev-desk-app.vercel.app/" // TODO: Update this after deploying to Vercel
     },
     {
         id: "instagram-clone",
