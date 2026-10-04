@@ -1,83 +1,95 @@
-# 🚀 Abdul Basith - Full-Stack Developer Portfolio
+# Abdul Basith — Engineering Portfolio
 
-A modern, responsive, and secure portfolio website built to showcase my skills as a **Backend-First Full-Stack Developer**. This project highlights my expertise in building scalable architectures, secure applications, and intuitive user interfaces.
+A single-page, editorial-style engineering portfolio documenting professional and independent software architecture work.
 
+## Overview
 
-## 🚀 Live Demo
+This repository contains the source code for my engineering portfolio. It is designed as an "Editorial Engineering Report" and "Data Observatory," moving away from traditional grid-based portfolio layouts. It prioritizes data-driven engineering evidence, clean architectural representations, and professional restraint.
 
-Check out the live version here: [Abdul Basith - Portfolio](https://abdul-basith-fullstack-webdev.vercel.app/)
+## Featured Engineering Work
 
-## 🌟 Key Features
+The portfolio documents verified production engineering workstreams from the AutoShipp SaaS ecosystem:
+- **Shopify Customer Migration:** Transactional, resumable data pipelines and reconciliation.
+- **Platform Data Consolidation:** Zero-downtime database schema consolidation using dual-writes.
+- **WhatsApp / Meta Tech Provider:** Multi-tenant messaging infrastructure with Redis deduplication and HMAC validation.
+- **Identity & RBAC:** Dynamic account authorization and strict middleware boundaries.
 
+## Independent Work
 
-*   **🎨 Modern UI/UX:** Built with **React** and **Bootstrap 5**, featuring a dark, neon-themed aesthetic with glassmorphism effects.
-*   **📱 Fully Responsive:** Optimized for all devices, from large desktops to mobile phones.
-*   **⚡ High Performance:** Powered by **Vite** for lightning-fast development and optimized production builds.
-*   **🔒 Secure Implementation:** Demonstrates security-first thinking with sanitized inputs and secure download links.
-*   **📂 Project Gallery:** Detailed case studies of my projects (DevDesk, Instagram Clone, To-Do App) with architectural insights.
-*   **📧 Interactive Contact:** Fully functional `mailto` integration with pre-filled subject and body context.
-*   **📄 Resume System:** Direct PDF download with forced filename and an integrated preview viewer.
+Independent system engineering projects represented:
+- **NeuroVault:** AI knowledge platform (Next.js, pgvector, BullMQ).
+- **DevDesk:** Project management system (MERN stack, JWT, robust data modeling).
 
-## 🛠️ Tech Stack
+## Design System
 
-*   **Frontend Library:** [React 19](https://react.dev/)
-*   **Build Tool:** [Vite](https://vitejs.dev/)
-*   **Styling:** Bootstrap 5, Custom CSS3, Framer Motion (Animations)
-*   **Icons:** [Lucide React](https://lucide.dev/)
-*   **Routing:** React Router v7
-*   **Linting:** ESLint
+The visual language is heavily restrained and focuses on typography and precision:
+- **Editorial engineering report:** Designed to resemble an annual report or technical journal.
+- **Warm neutral palette:** 95% monochromatic (graphite, steel, warm paper, deep charcoal) with 5% restrained orange/amber accents.
+- **Typography-led hierarchy:** Utilizes Inter (neo-grotesque) and JetBrains Mono (monospace) without relying on heavy font weights.
+- **Technical/data visualizations:** Direct representation of data flows and project metrics rather than generic UI cards.
+- **Light/dark themes:** Hand-tuned color pairings for both modes to maintain readability and contrast.
+- **Responsive layout:** Fluid adaptation across mobile and desktop environments.
 
-## 📂 Project Structure
+## Technical Stack
+
+The frontend is built using:
+- **React 19**
+- **Vite**
+- **React Bootstrap / Bootstrap 5** (Grid and layout)
+- **Framer Motion** (Subtle micro-animations)
+- **Lucide React** (Minimalist iconography)
+- **Vanilla CSS** (Custom properties for theming and specialized components)
+
+## Key Features
+
+- Single-page navigation
+- Responsive layout
+- Light/dark mode with `localStorage` theme persistence
+- Data visualizations constructed natively using CSS/HTML
+- Downloadable resume integration
+- Direct email contact generation
+- Accessible semantic markup
+
+## Development
+
+The project uses NPM for package management. Standard commands available:
 
 ```bash
-📦 Portfolio
-├── 📂 public/             # Static assets (images, PDFs, favicon)
-├── 📂 src/
-│   ├── 📂 assets/         # Source assets (profile pics, etc.)
-│   ├── 📂 components/     # Reusable UI components (Navbar, Cards, Button, etc.)
-│   ├── 📂 data/           # Static data files (projects.js)
-│   ├── 📂 pages/          # Page views (Home, Projects, Resume, Contact)
-│   ├── 📜 App.jsx         # Main application component with Routing
-│   ├── 📜 main.jsx        # Entry point
-│   └── 📜 index.css       # Global styles and overrides
-├── 📜 index.html          # Entry HTML
-├── 📜 package.json        # Dependencies and scripts
-└── 📜 vite.config.js      # Vite configuration
+# Install dependencies
+npm install
+
+# Start local development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run ESLint validation
+npm run lint
+
+# Preview production build locally
+npm run preview
 ```
 
-## 🚀 Getting Started
+## Validation
 
-To run this project locally on your machine:
+The current implementation has been successfully validated with:
+- `npm run lint` (0 errors)
+- `npm run build` (Successful Vite production build)
+- Manual browser validation for responsive behavior, theme toggling, and data visualization rendering.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/abdulbasithibnhanifa/portfolio.git
-    cd portfolio
-    ```
+## Repository Structure
 
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
-
-3.  **Start the development server:**
-    ```bash
-    npm run dev
-    ```
-
-4.  **Build for production:**
-    ```bash
-    npm run build
-    ```
-
-## 👤 Author
-
-**Abdul Basith**
-*   **Role:** Full-Stack Developer (Backend Focus)
-*   **Specialty:** Secure Architecture, Scalable Systems, Clean Code
-*   **Email:** [abdulbasithibnhanifa@gmail.com](mailto:abdulbasithibnhanifa@gmail.com)
-*   **LinkedIn:** [Abdul Basith](https://www.linkedin.com/in/abdul-basith-ibn-hanifa/)
-*   **GitHub:** [abdulbasithibnhanifa](https://github.com/abdulbasithibnhanifa)
-
----
-*Built with ❤️ and code.*
+```
+├── public/                 # Static assets (Resume PDF, resume preview image)
+├── src/
+│   ├── assets/             # Profile pictures and graphical assets
+│   ├── components/         # Reusable UI (Navbar, Button, Footer, SEO)
+│   ├── pages/              # Main view components (Home.jsx)
+│   ├── App.jsx             # Root React component
+│   ├── main.jsx            # Application entry point
+│   └── index.css           # Design system tokens, typography, and utility classes
+├── package.json            # Project dependencies and script definitions
+├── vite.config.js          # Vite build configuration
+└── eslint.config.js        # ESLint flat config
+```
